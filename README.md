@@ -1,58 +1,66 @@
-# Amazon Review Scraper
+# 🌆 Amazon Review Scraper
 
-This JavaScript script scrapes customer reviews from Amazon product pages using the browser console. It extracts review details such as reviewer name, review text, rating, purchase status, and helpful votes.
+Amazon Review Scraper is a **Chrome Extension** that extracts customer reviews from Amazon product pages. It automates the process of navigating pages and collecting structured review data, which can be exported as a CSV file.
 
-## 📌 Features
-- Extracts multiple review attributes (reviewer name, rating, review text, color, etc.).
-- Supports pagination to scrape all reviews from multiple pages.
-- Outputs data in JSON format for easy processing.
-
-## 🚀 How to Use
-1. Open **Amazon** and navigate to the product’s customer review section.
-2. Open the **Developer Console** (Press `F12` or `Ctrl + Shift + J` in Chrome).
-3. Copy and paste the following script into the console and press **Enter**:
-
-   ```js
-   // Paste the amazon_scraper.js script here
-   ```
-
-   The script will automatically collect all reviews and log them in the console.
-
-## 📚 Example Output
-```json
-[
-  {
-    "review_date": "January 10, 2024",
-    "review_data": "Great product! Highly recommend.",
-    "reviewer_profile_url": "https://www.amazon.com/gp/profile/amzn1.account...",
-    "reviewer_name": "John Doe",
-    "review_url": "https://www.amazon.com/review/...",
-    "rating": "5 out of 5 stars",
-    "review_title": "Awesome Purchase!",
-    "variant": "color: Black",
-    "purchase_status": "Verified Purchase",
-    "helpful_vote_count": 3
-  }
-]
-```
-
-## 🔧 Requirements
-- Works in Google Chrome and other modern browsers.
-- No additional dependencies required.
-
-## ⚠️ Disclaimer
-This script is for educational purposes only.
-Scraping Amazon may violate their Terms of Service. Use responsibly.
-
-## 📛 License
-This project is licensed under the MIT License.
+## 🚀 Features
+- ✅ **Scrape Amazon Reviews**: Automatically extract review details, including reviewer name, rating, review text, date, helpful votes, and more.
+- ✅ **Pagination Support**: Fetch reviews from multiple pages using URL-based pagination.
+- ✅ **CSV Export**: Download scraped reviews in a structured CSV format.
+- ✅ **Simple UI**: Easy-to-use interface with a scrape button and export option.
+- ✅ **Lightweight**: Runs efficiently within the browser without external dependencies.
 
 ---
 
-### **Next Steps**
-1. In your GitHub repository, click **"Add file" → "Create new file"**.  
-2. Name it `README.md`.  
-3. Paste the content above.  
-4. Click **"Commit new file"**.
+## 📂 Folder Structure
+```
+amazon-review-scraper/
+│── manifest.json               # Chrome Extension Manifest
+│── icons/
+│   └── icon.png                # Extension Icon
+│── scripts/
+│   ├── popup.js                # Main Script (Handles Scraping & Export)
+│   ├── background.js           # Background Script (if needed for permissions)
+│── frontend/
+│   ├── popup.html              # UI Structure
+│   ├── popup.css               # UI Styling
+```
 
-Let me know if you need further modifications! 🚀
+---
+
+## 🔧 Installation Guide
+1. **Download or Clone** this repository:
+   ```sh
+   git clone https://github.com/hassanahmad2136/amazon-review-scraper.git
+   ```
+2. Open **Google Chrome** and navigate to:
+   ```
+   chrome://extensions/
+   ```
+3. **Enable Developer Mode** (toggle in the top-right corner).
+4. Click **Load Unpacked** and select the `amazon-review-scraper/` folder.
+5. The extension is now installed and ready to use!
+
+---
+
+## 💪 Usage Instructions
+1. Navigate to an Amazon product page.
+2. Click on the **Amazon Review Scraper** extension icon.
+3. Press **Scrape Reviews** to begin extracting reviews.
+4. Once scraping is complete, click **Export CSV** to download the data.
+
+---
+
+## ✨ Contributing
+Contributions are welcome! Feel free to submit a Pull Request or open an Issue if you encounter any problems.
+
+---
+
+## 💎 License
+This project is licensed under the **MIT License**.
+
+---
+
+## 👤 Author
+Developed by **Hassan Ahmad**.
+For queries, contact: [hassanahmad2136@gmail.com].
+
